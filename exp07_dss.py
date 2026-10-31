@@ -3,12 +3,8 @@ Experiment 7: Digital Signature Standard (DSS / DSA)
 Message authentication and integrity verification.
 """
 
-import hashlib
-import random
-import math
-import os
-import sys
-sys.path.insert(0, os.path.dirname(__file__))
+import hashlib, random, math, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) if '__file__' in dir() else os.getcwd())
 from exp06_rsa import extended_gcd
 
 

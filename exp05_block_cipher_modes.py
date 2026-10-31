@@ -3,9 +3,8 @@ Experiment 5: Block Cipher Modes of Operation — ECB, CBC, CFB, OFB, CTR
 Uses the AES-128 implementation from exp03. Compares ciphertext patterns.
 """
 
-import os
-import sys
-sys.path.insert(0, os.path.dirname(__file__))
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) if '__file__' in dir() else os.getcwd())
 from exp03_aes import aes_encrypt_block, aes_decrypt_block, pkcs7_pad, pkcs7_unpad
 
 

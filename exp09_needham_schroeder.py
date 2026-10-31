@@ -15,11 +15,15 @@ import secrets
 
 def sym_encrypt(key: bytes, plaintext: bytes) -> bytes:
     """Simulate encryption: AES-like (actually XOR keystream for clarity)."""
+    import os as _os, sys as _sys
+    _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)) if '__file__' in dir() else _os.getcwd())
     from exp04_rc4 import rc4
     return rc4(key, plaintext)
 
 
 def sym_decrypt(key: bytes, ciphertext: bytes) -> bytes:
+    import os as _os, sys as _sys
+    _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)) if '__file__' in dir() else _os.getcwd())
     from exp04_rc4 import rc4
     return rc4(key, ciphertext)
 
